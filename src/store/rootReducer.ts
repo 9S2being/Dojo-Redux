@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
 
 export const persistedReducer = persistReducer(
   {
-    key: "auth",
+    key: "verified",
     storage
   },
   rootReducer
