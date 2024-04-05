@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
-import { UserDTO, UsersDB } from "../../types/user"
+import { UserDTO, UsersState } from "../../types/user"
 
-const initialState: UsersDB = {
+const initialState: UsersState = {
   users: []
 }
 
@@ -11,7 +11,7 @@ export const userSlice = createSlice({
     reducers: {
       signIn: (state, action: PayloadAction<UserDTO>) => {
         const index = state.users.findIndex(
-          (u) => u.email === action.payload.email
+          (user) => user.email === action.payload.email
         )
   
         if (index !== -1) {

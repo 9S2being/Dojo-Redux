@@ -4,6 +4,6 @@ export interface UserDTO {
     token?: number | undefined
   }
   
-  export interface UsersDB {
+  export interface UsersState {
     users: UserDTO[]
   }
